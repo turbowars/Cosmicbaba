@@ -1,0 +1,18 @@
+# humanstxt.org/
+# The humans responsible & technology colophon\
+
+# THANKS  _/\_
+
+Cosmic baba
+Universe
+Mother 
+Father 
+Master
+Shambo
+
+
+# TECHNOLOGY COLOPHON
+
+Cosmic dust, Angel light, Holy blessings, Ingredient X.
+HTML5, CSS3
+jQuery, Modernizr

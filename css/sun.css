@@ -1,0 +1,193 @@
+/*Custom styles*/
+
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700);
+
+body{
+  font-family: 'Lato', sans-serif;
+  font-weight: 100;
+}
+
+/* Animation keyframes*/
+@keyframes move-twink-back { from {background-position:0 0;} to {background-position:-10000px 5000px;} } @-webkit-keyframes move-twink-back { from {background-position:0 0;} to {background-position:-10000px 5000px;} } @-moz-keyframes move-twink-back { from {background-position:0 0;} to {background-position:-10000px 5000px;} } @-ms-keyframes move-twink-back { from {background-position:0 0;} to {background-position:-10000px 5000px;} } @keyframes move-clouds-back { from {background-position:0 0;} to {background-position:10000px 0;} } @-webkit-keyframes move-clouds-back { from {background-position:0 0;} to {background-position:10000px 0;} } @-moz-keyframes move-clouds-back { from {background-position:0 0;} to {background-position:10000px 0;} } @-ms-keyframes move-clouds-back { from {background-position: 0;} to {background-position:10000px 0;} }
+
+/*Glow animations*/
+@-webkit-keyframes greenPulse {
+  from { background-color: #749a02; -webkit-box-shadow: 0 0 9px #333; }
+  50% { background-color: #91bd09; -webkit-box-shadow: 0 0 18px #91bd09; }
+  to { background-color: #749a02; -webkit-box-shadow: 0 0 9px #333; }
+}
+
+a.green.button {
+  -webkit-animation-name: greenPulse;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+}
+
+.galaxy{
+  width: 100%;
+  min-height: 100vh;
+  background: url(../img/stars.png) repeat #000;
+}
+
+.stars {
+  width: 100%;
+  min-height: 100vh;
+  background: url(../img/stars2.png) repeat #000;
+  opacity: 0.9;
+  position: absolute;
+  top:0;
+}
+
+.twinkling {
+  width: 100%;
+  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  background: transparent url(../img/twinkling.png) repeat top center;
+  z-index: 1;
+  -moz-animation: move-twink-back 200s linear infinite;
+  -ms-animation: move-twink-back 200s linear infinite;
+  -o-animation: move-twink-back 200s linear infinite;
+  -webkit-animation: move-twink-back 200s linear infinite;
+  animation: move-twink-back 200s linear infinite;
+}
+
+.door {
+  width: 80%;
+  margin: 0 auto 11px;
+  padding-top: 262px;
+  position: relative;
+  z-index: 2;
+  max-width: 567px;
+}
+
+.open .door {
+  transition: all 0.5s ease;
+  padding-top: 262px;
+  overflow:hidden;
+}
+
+.unlock.lock{
+  min-height: 100px;
+}
+
+.earth {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.69);
+  border: 0;
+  border-bottom: 1px solid rgb(0, 76, 76);
+  height: 50px;
+  color: #fff;
+  font-size: 20px;
+  outline: 1px;
+}
+
+.earth:focus {
+  border-color: rgba(71, 220, 255, 1.08);
+}
+
+.moon{
+  background: url(../img/heart.svg) no-repeat 10px center #1e1e1e;
+  border: 0;
+  padding-left: 40px;
+  height: 40px;
+  display: block;
+  margin: 18px auto;
+  color: #fff;
+  outline:0px;
+  background-size: 23px;
+  opacity: 0.1;
+  text-transform: uppercase;
+
+}
+
+.moon.glow{
+  opacity: 0.9;
+  transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out;
+}
+
+/*On content open*/
+.open .moon.glow {
+  opacity: 0.7;
+  float: right;
+  text-indent: -999em;
+  margin-left: 10px;
+}
+
+.moon.glow:hover,
+.open .moon.glow:hover{
+  opacity: 1;
+}
+
+.open .earth {
+  width: calc(100% - 3em);
+  margin: 0;
+  float: left;
+  border-bottom: 1px solid #5A5A5A;
+  max-width: 500px;
+}
+
+
+.lock {
+  width: 80%;  margin: 0 auto;
+  position: relative;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.111);
+  overflow: hidden;
+  z-index: 3;
+  max-width: 567px;
+
+  /* Set our transitions up. */
+  -webkit-transition: max-height 0.8s;
+  -moz-transition: max-height 0.8s;
+  transition: max-height 0.8s;
+}
+
+.key {
+  padding: 10px 20px;
+  font-size: 28px;
+  text-align: center;
+  line-height: 33px;
+  margin:0;
+}
+
+.gratitude {
+  padding-right: 5px;
+  font-weight: 300;
+}
+
+img.singularity {
+  position: absolute;
+  z-index: 1;
+  top: 20px;
+  width: 226px;
+  margin: 0 0 0 -113px;
+  display: block;
+  left: 50%;
+}
+
+/*Media query for device below tablet landscape*/
+@media screen and (max-device-width: 768px) { 
+  body{
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+  }
+  .gratitude {
+    font-weight: 400;
+  }
+
+  .moon{
+
+  }
+}
+
